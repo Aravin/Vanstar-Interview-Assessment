@@ -1,19 +1,21 @@
-export function getHealthRisk(bmi: number) {
-    let result = 'none';
+// combination of switch and return will improve the performance.
+export function getHealthRisk(bmi: number): [string, string] {
 
     switch (true) {
         case (bmi <= 18.4):
-            result = 'Malnutrition risk';
+            return ['Malnutrition risk', 'Underweight'];
         case (bmi >= 18.5 && bmi <= 24.9):
-            result = 'Low risk';
+            return ['Low risk', 'Normal weight'];
         case (bmi >= 25 && bmi <= 29.9):
-            result = 'Enhanced risk';
+            return ['Enhanced risk', 'Overweight'];
         case (bmi >= 30 && bmi <= 34.9):
-            result = 'Medium risk';
+            return ['Medium risk', 'Moderately obese'];
         case (bmi >= 35 && bmi <= 39.9):
-            result = 'High risk';
+            return ['High risk', 'Severely obese'];
         case (bmi >= 40):
-            result = 'Very high risk';
+            return ['Very high risk', 'Very severely obese'];
     }
-    
+
+    // failure
+    return ['', ''];
 }

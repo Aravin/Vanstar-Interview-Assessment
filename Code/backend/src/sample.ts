@@ -28,6 +28,11 @@ export const sample = [
       "Gender": "Female",
       "HeightCm": 167,
       "WeightKg": 82
-    }
+    },
+    {
+      "Gender": "Female",
+      "HeightCm": 150,
+      "WeightKg": 70
+    },
   ]
   
