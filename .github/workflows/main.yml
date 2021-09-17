@@ -21,15 +21,19 @@ jobs:
       with:
         node-version: 12
 
-    - name: yarn install
+    - name: Install Yarn
       run: yarn install
       
-    - name: yarn install
+    - name: Add Typescript
       run: yarn add typescript
       
-    - name: typescript compile
+    - name: Compile the Project
       run: npx tsc
       
+    - name: Run the Tests
+      run: npm test
+
     - name: Run the program
       run: npm start
+    
 
