@@ -25,7 +25,7 @@ jobs:
       run: yarn install
       
     - name: yarn install
-      run: yarn typescript@latest
+      run: yarn add typescript
       
     - name: typescript compile
       run: npx tsc
