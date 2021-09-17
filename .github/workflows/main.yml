@@ -29,4 +29,7 @@ jobs:
       
     - name: typescript compile
       run: npx tsc
+      
+    - name: Run the program
+      run: npm start
 
