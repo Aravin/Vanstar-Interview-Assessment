@@ -35,13 +35,13 @@ test('For the BMI between 30 and 34.9, Health Risk will be Medium risk and Categ
   expect(test[1]).toBe('Moderately obese');
 });
 
-test('For the BMI between 35 and 39.9, Health Risk will be Medium risk and Category will be Moderately obese', () => {
+test('For the BMI between 35 and 39.9, Health Risk will be High risk and Category will be Severely obese', () => {
   const test = getHealthRisk(37.5);
   expect(test[0]).toBe('High risk');
   expect(test[1]).toBe('Severely obese');
 });
 
-test('For the BMI above 40, Health Risk will be Very high risk and Category will be Moderately obese', () => {
+test('For the BMI above 40, Health Risk will be Very high risk and Category will be Very severely obese', () => {
   const test = getHealthRisk(42.5);
   expect(test[0]).toBe('Very high risk');
   expect(test[1]).toBe('Very severely obese');
