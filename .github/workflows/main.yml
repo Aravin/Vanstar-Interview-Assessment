@@ -28,7 +28,7 @@ jobs:
       - name: Typescript compiler
         uses: iCrawl/action-tsc@v1
         with:
-            $build: build
+            project: Code\backend\
             
       - name: Run Jest
       # You may pin to the exact commit or the version.
